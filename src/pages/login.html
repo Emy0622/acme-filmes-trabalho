@@ -4,39 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="../output.css">
 </head>
 
 <body>
-    <div class="min-h-screen bg-black flex">
-        <div class="hidden lg:block relative w-0 flex-1 bg-gray-900" style="background-image: url('https://blog.videoperola.com.br/wp-content/uploads/2023/08/filmescomedia.jpg'); background-repeat: no-repeat; background-size: cover;">
-        </div>
 
-        <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-            <div class="mx-auto w-full max-w-sm">
-                <div>
-                    <img src="img/acme-filmes-logo 1.png" alt="" class="lg:hidden h-20 w-auto">
-                </div>
-                <div class="mt-6">
-                    <form action="">
-                        <div class="mb-4">
-                            <input type="Username" placeholder="Username" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
-                        </div>
-                        <div class="mb-4">
-                            <input type="text" placeholder="E-mail" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
-                        </div>
-                        <div class="mb-4">
-                            <input type="password" placeholder="Senha" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
-                        </div>
+    <body class="bg-black">
 
-                        <div class="mb-4">
-                            <button class="inline-block w-full py-4 px-8 leading-none text-white bg-blue-950 hover:bg-blue-400 font-semibold rounded shadow">Entrar</button>
-                        </div>
-                    </form>
+        <div class="min-h-screen flex justify-center items-center">
+            <div class="hidden lg:block relative w-0 flex-1 bg-gray-900">
+                <img src="../img/filmescomedia.jpg" alt="" class="object-cover w-full h-full">
+
+            </div>
+            <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+                <div class="mx-auto w-full max-w-sm">
+                    <div>
+                        <img src="../img/acme-filmes-logo 1.png" alt="" class="lg:hidden h-20 w-auto">
+                    </div>
+                    <div class="mt-6 mb-6 text-white text-2xl text-center">LOGIN</div>
+                    <div class="mt-6">
+                        <form action="">
+                            <div class="mb-4">
+                                <input type="Username" placeholder="Username" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" placeholder="E-mail" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
+                            </div>
+                            <div class="mb-4">
+                                <input type="password" placeholder="Senha" class="appearance-none block w-full py-3 px-4 leading-tight text-gray-700">
+                            </div>
+
+                            <div class="mb-4">
+                                <a href="../pages/inicio.html">
+                                    <button class="inline-block w-full py-4 px-8 leading-none text-white bg-blue-950 hover:bg-blue-400 font-semibold rounded shadow">Entrar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>

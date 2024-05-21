@@ -34,7 +34,7 @@ export async function postFilme(filme) {
 
 export async function deleteFilme(id) {
 
-    const url = `http://localhost:8080/v2/acme/filme/delete/${id}`
+    const url = `http://localhost:8080/v3/acme/filme/delete/${id}`
     const options = {
         method: 'DELETE'
     }
@@ -42,22 +42,6 @@ export async function deleteFilme(id) {
     console.log(response.json)
 
     return response.ok
-}
-
-export async function updateFilme(id, filme) {
-
-    console.log(id, filme)
-    const url = `http://localhost:8080/v2/acme/filmes/${id}`
-    const options = {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(filme)
-    }
-
-    const response = await fetch(url, options)
-    return response.json()
 }
 
 //atores
@@ -99,7 +83,7 @@ export async function postAtor(ator) {
 
 export async function deleteAtor(id) {
 
-    const url = `http://localhost:8080/v2/acme/diretor/delete/:id`
+    const url = `http://localhost:8080/v3/acme/ator/delete/:id`
     const options = {
         method: 'DELETE'
     }
@@ -109,21 +93,6 @@ export async function deleteAtor(id) {
     return response.ok
 }
 
-// export async function updateAtor(id, ator) {
-
-//     const url = `http://localhost:8080/v2/AcmeFilmes/ator/${id}`
-//     const options = {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(ator)
-//     }
-
-//     const response = await fetch(url, options)
-
-//     return response.json()
-// }
 
 //diretores
 
@@ -139,7 +108,7 @@ export async function getDiretores() {
 
 export async function getDiretorId(id) {
 
-    const url = `http://localhost:8080/v2/acme/diretor/${id}`
+    const url = `http://localhost:8080/v2/acme/diretores/${id}`
     const response = await fetch(url)
     const data = await response.json()
 
@@ -147,7 +116,7 @@ export async function getDiretorId(id) {
 }
 
 export async function postDiretor(diretor) {
-    const url = 'http://localhost:8080/v2/AcmeFilmes/diretor'
+    const url = 'http://localhost:8080/v2/acmefilmes/diretores/'
     const options = {
         method: "POST",
         headers: {
@@ -164,7 +133,7 @@ export async function postDiretor(diretor) {
 
 export async function deleteDiretor(id) {
 
-    const url = `http://localhost:8080/v2/acme/diretor/delete/${id}`
+    const url = `http://localhost:8080/v3/acme/diretores/delete/${id}`
     const options = {
         method: 'DELETE'
     }
@@ -173,23 +142,6 @@ export async function deleteDiretor(id) {
 
     return response.ok
 }
-
-// export async function updateDiretor(id, diretor) {
-
-//     console.log(id, diretor)
-//     const url = `http://localhost:8080/v2/AcmeFilmes/diretor/${id}`
-//     const options = {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(diretor)
-//     }
-
-//     const response = await fetch(url, options)
-//     console.log(response.json())
-//     return response.json()
-// }
 
 //generos
 
@@ -239,20 +191,3 @@ export async function deleteGenero(id) {
 
     return response.ok
 }
-
-// export async function updateGenero(id, genero) {
-
-//     console.log(id, genero)
-//     const url = `http://localhost:8080/v2/acmefilmes/generos/${id}`
-//     const options = {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(genero)
-//     }
-
-//     const response = await fetch(url, options)
-//     console.log(response.json())
-//     return response.json()
-// }
